@@ -1,0 +1,20 @@
+Overview
+
+* Divide and Conquer algorithm
+ - Breaks down problem into multiple subproblems recursively until they become simple to solve. 
+ - Solutions are combined to solve original problem.
+
+* Running time
+ - O(n^2) worst case
+ - O(n * log(n)) best and average case
+
+General Principle
+
+* Quicksort
+1. Choose pivot element (usually last or random)
+
+2. Stores elements less than pivot in left subarray. 
+ 2.1 Stores elements greater than pivot in right subarray.
+
+3. Call quicksort recursively on left subarray.
+ 3.1 Call quicksort recursively on right subarray. 
