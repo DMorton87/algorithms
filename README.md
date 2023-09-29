@@ -1,2 +1,2 @@
 # algorithms
-Material from algorithms course
+Code and explanations from algorithms course
