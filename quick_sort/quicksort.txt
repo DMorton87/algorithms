@@ -8,6 +8,22 @@ Overview
  - O(n^2) worst case
  - O(n * log(n)) best and average case
 
+* Worst case scenario explaination:
+ QuickSort's efficiency lies in its ability to partition data around a pivot, which ideally splits the data into two
+  roughly equal halves. From there, QuickSort can recursively sort the halves. 
+  Each partition operation is O(n), and if we halve the data each time, we have log(n) partition operations,
+   making the overall time complexity O(n log(n)).
+
+ However, if the data is already sorted, and if we are choosing the pivot poorly 
+ (like choosing the first or last element as pivot), QuickSort doesn't split the list into two halves.
+ Instead, one partition has all the elements except the pivot, and the other partition is empty. 
+ This gives us a situation where we have n partition operations, making the total time complexity O(n^2).
+ Technically, it would still "split" the list, but one of the partitions would indeed be empty.
+ This pattern would continue for every recursive call of QuickSort on the non-empty partition, 
+ each time selecting the largest remaining number as the pivot, and creating an empty partition. 
+ This inefficient partitioning leads to the worst-case time complexity of O(n^2).
+
+
 General Principle
 
 * Quicksort
