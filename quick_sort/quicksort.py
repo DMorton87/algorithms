@@ -18,7 +18,3 @@ def partition(nums, low, high):
     return i
     
 
-list = [5, 90, 202, 12, 4, 67, 72, 37, 63, 89, 93, 105]
-quick_sort(list, 0, len(list) - 1)
-
-print(list)
