@@ -11,10 +11,25 @@ Overview
 General Principle
 
 * Quicksort
-1. Choose pivot element (usually last or random)
+1. The quick_sort function is called and it's parameters are: the list to be sorted, the lowest index and the highest index.
+    1a. if low is greater than than high then the list is either empty or only contains one value and the list is already sorted.
+2. If low is less than high, then it can be sorted.
+    2a. Call the partition function on the list and set a variable that captures the value returned by partition.
+    2b. Call quick_sort recursively on both sides of the list that has been divided into sub arrays by the partition function.
+     We know where to split the list based on the values returned by the partition function in 3a.
+3. Return the sorted list.
 
-2. Stores elements less than pivot in left subarray. 
- 2.1 Stores elements greater than pivot in right subarray.
+Partition:
 
-3. Call quicksort recursively on left subarray.
- 3.1 Call quicksort recursively on right subarray. 
+1. The partition function is called and takes the same parameters as quick_sort.
+2. initialize the pivot variable as the element at the highest index of the list.
+3. initialize the i variable as the the parameter "low".
+4. j is initialized by a for loop and told to move through the list from the parameters low to high.
+    4a. As j moves through the list, if the element it falls on is smaller then the pivot...
+    4b. the element at i and the element at j will swap places...
+    4c. and the position of i will increment by one.
+5. Once the first round of sorting is complete the elements at i and high will swap places.
+    (j has already moved through the list, swapping with i until all the values to the left of i are smaller than the pivot,
+    and all the values to the right are larger) 
+6. Finally, the function will return i, which the quick_sort function will then use 
+    to divide the list further into sub arrays if there is still sorting to be done.
