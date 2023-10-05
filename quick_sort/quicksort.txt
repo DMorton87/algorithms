@@ -23,6 +23,17 @@ Overview
  each time selecting the largest remaining number as the pivot, and creating an empty partition. 
  This inefficient partitioning leads to the worst-case time complexity of O(n^2).
 
+* Fixing quick_sorts Big O
+ Random Approach
+  The random approach is easy to code, works practically all of the time, and as such is often used.
+  The idea is to quickly shuffle the list before sorting it. The likelihood of shuffling into a sorted list
+  is astronomically unlikely, and is also more unlikely the larger the input.
+ Median Approach
+  One of the most popular solutions is to use the "median of three" approach. Three elements 
+  (for example: the first, middle, and last elements) of each partition are chosen and the median is found between them.
+  That item is then used as the pivot.
+  This approach has the advantage that it can't break down to O(n^2) time because we are guaranteed to never
+  use the worst item in the partition as the pivot. That said, it can still be slower because a true median isn't used.
 
 General Principle
 
