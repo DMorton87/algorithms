@@ -1,0 +1,22 @@
+* What is Bubble_Sort?
+ Bubble sort is a basic algorithm for arranging a string of numbers or other elements in the correct order. 
+ The method works by examining each set of adjacent elements in the string, from left to right, and 
+ switching their positions if they are out of order. The algorithm then repeats this process until it can
+ run through the entire string and find no two elements that need to be swapped.
+
+*Bubble_Sort Time complexity
+ The best-case time complexity of Bubble Sort is: O(n). In this case, we are already dealing with a sorted list.
+ The worst-case time complexity of Bubble Sort is: O(n²). The two nested loops suggest that we are dealing with quadratic time.
+ The average time complexity of Bubble Sort case is: O(n²). It's just a slower algorithm, and sometimes that okay. 
+
+*Bubble_Sort Pseudocode
+ Procedure bubble_sort(nums):
+    Set swapping to True
+    While swapping is True:
+        Set swapping to False
+        For i from the 2nd element to the last element:
+            If the (i-1)th element of nums is greater than the ith element:
+                Swap the (i-1)th element and the ith element of nums
+                Set swapping to True
+    Return nums
+ End Procedure
