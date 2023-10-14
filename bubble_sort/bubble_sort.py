@@ -1,6 +1,6 @@
 
 def bubble_sort(nums):
-    i = 0
+    i = 0 #This step is unnecessary, but I get nervous about undeclared variables.
     swapping = True
     while swapping:
         swapping = False
