@@ -1,0 +1,45 @@
+*What is merge_sort?
+  Merge Sort is a divide-and-conquer algorithm that was invented by John von Neumann in 1945. 
+  The fundamental idea behind merge sort is to divide the unsorted list into NN sublists, 
+  each containing one element, and then repeatedly merge sublists to produce new sorted sublists
+  until there is only one sublist remaining.
+
+   Steps of the Merge Sort Algorithm:
+
+    Divide: The list is divided into two halves.
+    Conquer: Recursively sort both halves.
+    Merge: Combine (merge) the sorted halves to produce a single sorted list.
+    
+*merge_sort time complexity
+  Time Complexity:
+
+    Best Case: O(nlog⁡n)O(nlogn)
+    Average Case: O(nlog⁡n)O(nlogn)
+    Worst Case: O(nlog⁡n)O(nlogn)
+
+*merge_sort Pseudocode
+
+  merge_sort
+
+    If the length of the list is less than 2:
+    1a. Return the list (it's already sorted).
+    Else:
+    2a. Divide the list into two halves.
+    2b. Recursively apply merge_sort to both halves.
+    2c. Return the merge of the two sorted halves.
+
+  merge
+
+    Accept two sorted lists as parameters.
+    Initialize an empty list to hold the sorted values.
+    Initialize two pointers (i and j) to traverse through the two lists, setting them to zero.
+    While i and j have not yet reached the end of their respective lists:
+    4a. If the element at i in the first list is less than the element at j in the second list:
+    - Append the element at i to the final list and increment i by one.
+    4b. Else (the element at j in the second list is less than or equal to the element at i in the first list):
+    - Append the element at j to the final list and increment j by one.
+    If there are elements remaining in the first list (i has not reached the end):
+        Append all the remaining elements from the first list to the final list.
+    If there are elements remaining in the second list (j has not reached the end):
+        Append all the remaining elements from the second list to the final list.
+    Return the final, merged list.
