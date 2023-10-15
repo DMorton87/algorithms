@@ -1,0 +1,55 @@
+* What is insertion_sort
+  Imagine you're dealing a hand of cards. You deal cards one at a time, 
+  and as you receive each card, you insert it into its correct place within the hand you're holding, 
+  ensuring that you’re holding a sorted hand of cards at every step. 
+  That's pretty much how Insertion Sort works!
+
+  Steps
+
+    Start with the Second Element: 
+    We assume that the first element is "sorted" since it's the only element.
+
+    Insertion Process:
+        We look at the next element (let’s refer to it as the "key") and compare it with the previous elements.
+        If the "key" is smaller than its preceding element, we compare it with the elements before.
+        We keep moving left until we reach an element smaller than the "key" or until we reach the 
+        beginning of the array.
+        We insert the "key" in this position.
+
+    Repeat:
+        We move to the next element and repeat the insertion process until the entire array is sorted.
+        
+*insertion_sort Big O
+    Best Case: O(N)O(N)
+        When the array is already sorted, each key merely gets compared once to its preceding element 
+        (the while loop is skipped). Thus, we only have the outer loop running N times.
+
+    Worst Case: O(N^2)
+        This occurs when the array is sorted in reverse order. 
+        Every key is compared with each of the previous keys, 
+        leading to a quadratic number of operations.
+
+    Average Case: O(N^2)
+        On average, each key is compared with half of the previous keys. 
+        Although this is technically 1/2 N^2, we drop the constant fraction in Big O notation, 
+        leaving us with O(N2)
+
+*insertion_sort pseudocode
+  for index from 1 to length(array) - 1
+    key = array[index]
+    j = index - 1
+    while j >= 0 and array[j] > key
+        array[j + 1] = array[j]
+        j = j - 1
+    end while
+    array[j + 1] = key
+  end for
+
+  or, with tuple unpacking
+  for i from 0 to length(array) - 1
+    j = i
+    while j > 0 and array[j-1] > array[j]
+        swap(array[j], array[j-1])
+        j = j - 1
+    end while
+  end for

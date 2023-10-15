@@ -1,2 +1,2 @@
 # algorithms
-Code and explanations from algorithms course
+Code and explanations for Boot.dev algorithms course
